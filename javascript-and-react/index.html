@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <script type="text/javascript">
+
+        class CounterApp {
+            constructor() {
+                this.counter = 0;
+            }
+
+            init = () => {
+                this.spendCounter = document.querySelector("#counter");
+                setInterval(this.increment, 1000);
+            }
+        }
+
+        increment = () => {
+            this.counter++;
+            this.spendCounter.innerHTML = this.counter.toString();
+
+        }
+        let app= new CounterApp();
+        window.onload = app.init;
+    </script>
+</head>
+<body>
+<div>
+
+    <h1> Counter: <span id="counter">0 </span></h1>
+</div>
+</body>
+</html>
